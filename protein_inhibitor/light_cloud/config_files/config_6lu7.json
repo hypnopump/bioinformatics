@@ -1,0 +1,43 @@
+{   
+    "seed"               : 42,
+    "exp_name"           : "coronavirus_6lu7/",
+    "model"              : "coronavirus_6lu7/models/gru_initial.h5",
+    "data_source"        : "coronavirus_6lu7/data/train_dataset.smi",
+
+    "batch_size"         : 32,
+    "smiles_max_length"  : 256,
+    "datagen_shuffle"    : 1,
+    "datagen_verbose"    : 0,
+    "sampling_temp"      : 0.75,
+    "end_char"           : "A",
+    "batch_predict"      : 256,
+    "sampling_verbose"   : 1,
+
+    "vina_path"          : "vina",
+    "openbabel_path"     : "openbabel.obabel",
+    "obminimize_path"    : "openbabel.obminimize",
+    "docking_config"     : "coronavirus_6lu7/docking/6lu7_config.txt",
+    "docking_receptor"   : "coronavirus_6lu7/docking/6lu7.pdbqt",
+
+    "optimizer_params"   : {
+                "n_gens"      : 20,
+                "base_sim"    : 0.7,
+                "first_smiles": 10000,  
+                "gen_smiles"  : 500,  
+                "retain"      : 50,  
+                "start_smiles": 0,
+                "start_gen"   : 0,
+                "n_start_gen" : 0,  
+                "parallel"    : 1,  
+                "n_cpu"       : 1
+    },
+    "paths" : {
+                "models_path"        : "models/",
+                "results_path"       : "results/",
+                "work_path"          : "aux_docking/",
+                "docked_path"        : "aux_docking/docked/",
+                "data_path"          : "data/",
+                "docking_path"       : "docking/"
+    }   
+}
+    

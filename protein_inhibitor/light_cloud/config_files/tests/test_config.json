@@ -1,0 +1,41 @@
+{   
+    "seed"               : 42,
+    "exp_name"           : "coronavirus_ace2/",
+    "model"              : "coronavirus_ace2/models/gru_initial.h5",
+    "data_source"        : "coronavirus_ace2/data/train_dataset.smi",
+
+    "batch_size"         : 8,
+    "smiles_max_length"  : 256,
+    "datagen_shuffle"    : 1,
+    "datagen_verbose"    : 0,
+    "sampling_temp"      : 0.75,
+    "end_char"           : "A",
+    "batch_predict"      : 32,
+    "sampling_verbose"   : 1,
+
+    "vina_path"          : "../../../../../../../c/program files (x86)/pyrx/vina.exe",
+    "openbabel_path"     : "obabel",
+    "obminimize_path"    : "obminimize",
+    "docking_config"     : "coronavirus_ace2/docking/1r42_config.txt",
+    "docking_receptor"   : "coronavirus_ace2/docking/1r42.pdbqt",
+
+    "optimizer_params"   : {
+                "n_gens"      : 3,
+                "base_sim"    : 0.7,
+                "first_smiles": 31,  
+                "gen_smiles"  : 31,  
+                "retain"      : 10,  
+                "start_file"  : 0,  
+                "parallel"    : 1,  
+                "n_cpu"       : 1
+    },
+    "paths" : {
+                "models_path"        : "models/",
+                "results_path"       : "results/",
+                "work_path"          : "aux_docking/",
+                "docked_path"        : "aux_docking/docked/",
+                "data_path"          : "data/",
+                "docking_path"       : "docking/"
+    }   
+}
+    
